@@ -1,0 +1,203 @@
+*{
+    color: #fff;
+}
+html, body {
+    background-color: black;
+    width: 560;
+    height: 870;
+    overflow: hidden; 
+}
+
+h1 {
+    position: relative;
+    transform: translateX(2%);
+}
+.select-video-but {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 21px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: relative;
+    transform: translateX(82%);
+    margin-top: 20%; 
+    cursor: pointer;
+}
+
+.select-video-but:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+#video-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Makes the video cover the full screen */
+}
+
+.scroll-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;  /* Make the buttons circular */
+    width: 60px;         /* Set width */
+    height: 60px;        /* Set height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text */
+}
+
+.scroll-button:hover {
+    color: green;
+}
+
+#scroll-up {
+    right: 10px;
+    top: 40%;
+}
+
+#scroll-down {
+    right: 10px;
+    top: 50%; /* Adjust for proper spacing between buttons */
+}
+
+
+/* Style for the volume slider */
+#volume-slider {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+
+}
+
+#volume-slider::-webkit-slider-runnable-track {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    transition: transform 0.3s ease;
+}
+
+.aspect-ratio-button {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aspect-ratio-button:hover {
+    color: green;
+}
+
+.true-aspect-ratio {
+    width: 100%;
+    height: 50%; /* Fixed height */
+    object-fit: contain;
+    margin-top: 20px; /* Add some space around the video */
+    margin-bottom: 20px;
+}
+
+
+.horizen{
+
+    position: fixed;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;  /* Make the buttons circular */
+    width: 60px;         /* Set width */
+    height: 60px;        /* Set height */
+    display: flex;
+    justify-content: center;
+   align-items: center; /* Center the text */
+
+
+}
+
+
+.video {
+    transition: transform 0.3s ease; /* Smooth transition for orientation changes */
+  }
+  
+  .horizontal-mode {
+    transform: rotate(-90deg); /* Rotate video for horizontal display */
+    width: auto;
+    height: 100%;
+    object-fit:cover; /* Adjust to fit screen without cropping */
+  }
+  .horizen.active {
+
+    background-color: rgba(0, 255, 0, 0.5); /* Semi-transparent green */
+}
+
+
+  .loop{
+
+    position: fixed;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;  /* Make the buttons circular */
+    width: 60px;         /* Set width */
+    height: 60px;        /* Set height */
+    display: flex;
+    justify-content: center;
+   align-items: center; /* Center the text */
+
+
+}
+.loop.active {
+
+    background-color: rgba(0, 255, 0, 0.5); /* Semi-transparent green */
+}
